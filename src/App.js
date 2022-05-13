@@ -3,8 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import Login from './pages/Login'
 import Shop from './pages/Shop';
 import Product from './pages/Product'
-import Cart from './pages/Cart';
 import ProtectedPages from './pages/ProtectedPages';
+import Cart from './pages/Cart';
 
 function App() {
 

@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import CartProduct from "../components/CartProduct";
+import { setCartProductsThunk } from "../redux/actions";
+import { postCheckout } from "../services";
 
 const Cart = () => {
 
@@ -12,7 +15,7 @@ const Cart = () => {
     const [confirmCheckout, setConfirmCheckout] = useState(false)
 
     useEffect(() => {
-        dispatch(setConfirmCheckout());
+        dispatch(setCartProductsThunk());
     }, [dispatch]);
 
     useEffect(() => {
@@ -32,7 +35,7 @@ const Cart = () => {
     }, [confirmCheckout, navigate])
 
     const list = cartValues.map((item) => {
-        return <cartProduct key={item.id} prodObj={item} />;
+        return <CartProduct key={item.id} prodObj={item} />;
     });
 
     return(
