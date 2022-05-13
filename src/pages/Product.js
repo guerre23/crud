@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { setInfoProductThunk, setProductThunk } from "../redux/actions";
-import { addProductTocart } from "../services";
+import { addProductToCart } from "../services/";
+
 
 const Product = () => {
 
@@ -13,7 +14,7 @@ const Product = () => {
 
     const [quantity, setQuantity] = useState(0)
     const [confirm, setConfirm] = useState(false)
-    const [felterProd, setFilterProd] = useState([])
+    const [filtProd, setFiltProd] = useState([])
 
     useEffect(() => {
         dispatch(setInfoProductThunk(id));
@@ -21,9 +22,9 @@ const Product = () => {
 
     useEffect(() => {
         if(quantity && confirm){
-            addProductTocart({
+            addProductToCart({
                 product : id,
-            })
+            }) 
             .then((res) => {
                 console.log(res)
                 setConfirm(false)
