@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import cartProduct from "react-router-dom";
-import { setCartProductsThunk } from "../components/CartProduct";
+import { useNavigate } from "react-router-dom";
+import CartProduct from "../components/CartProduct";
+import { setCartProductsThunk } from "../redux/actions";
 import { postCheckout } from "../services";
 
 const Cart = () => {

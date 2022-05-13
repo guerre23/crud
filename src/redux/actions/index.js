@@ -1,5 +1,3 @@
-
-  
 import { deleteProductFromCart, getFilterCategories, getFilterProducts, getProductById, getProducts, getProductsFromCart } from "../../services"
 
 export const actions =  {

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux";
 import { deleteCartProductThunk } from "../redux/actions";
 
-const CartProdct = ({prodObj}) => {
+const CartProduct = ({prodObj}) => {
 
     const dispatch = useDispatch()
     const [deleteId, setDeleteId] = useState(null);
@@ -23,4 +23,4 @@ const CartProdct = ({prodObj}) => {
     )
 }
 
-export default CartProdct
+export default CartProduct

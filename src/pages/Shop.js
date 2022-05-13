@@ -1,4 +1,5 @@
 const Shop = () => {
+    
     const dispatch = useDispatch()
     const productArr = useSelector(state => state.products)
     const categoriesArr = useSelector(state => state.categories)
