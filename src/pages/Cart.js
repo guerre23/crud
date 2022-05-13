@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import CartProduct from "../components/CartProduct";
-import { setCartProductsThunk } from "../redux/actions";
-import { postCheckout } from "../services";
 
 const Cart = () => {
 
