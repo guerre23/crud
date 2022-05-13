@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
-import { loginUser } from './services'
+import { loginUser } from '../services'
 
 
 const Login = () => {
