@@ -10,15 +10,18 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/signup'/>
-        <Route element={<ProtectedPages/>} >
+            <Routes>
+        {/*Rutas Publicas*/}
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup'  />
+        {/*Rutas Privadas*/}
+        <Route element={<ProtectedPages />} >
           <Route path='/' element={<h1>Inicio</h1>} />
           <Route path='/shop' element={<Shop />} />
           <Route path='/shop/:id' element={<Product />} />
-          <Route path='/Cart' element={<Cart />} />
-          <Route path='/cart/success' element={<h1>Gracias por su compra</h1>} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/cart/success' element={<h1>Gracias por tu compra</h1>} />
+
         </Route>
       </Routes>
     </div>
